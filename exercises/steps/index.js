@@ -4,19 +4,34 @@
 // with N levels using the # character.  Make sure the
 // step has spaces on the right hand side!
 // --- Examples
-//   steps(2)
-//       '# '
-//       '##'
-//   steps(3)
-//       '#  '
-//       '## '
-//       '###'
-//   steps(4)
-//       '#   '
-//       '##  '
-//       '### '
-//       '####'
+  // steps(2)
+  //     '# '
+  //     '##'
+  // steps(3)
+  //     '#  '
+  //     '## '
+  //     '###'
+  // steps(4)
+  //     '#   '
+  //     '##  '
+  //     '### '
+  //     '####'
 
-function steps(n) {}
+function steps(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = '';
 
-module.exports = steps;
+    for (let column = 0; column < n; column++) {
+      if (column <= row) {
+        stair += '#';
+      } else {
+        stair += ' ';
+      }
+    }
+
+    console.log(stair);
+  }
+}
+steps(4)
+
+// module.exports = steps;
