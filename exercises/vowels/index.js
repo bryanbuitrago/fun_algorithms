@@ -24,6 +24,7 @@ function vowels(str) {
 }
 
 // ############## First Solution ################
+// function vowels(str) {
 //   const vowels = ['a', 'e', 'i', 'o', 'u'];
 //   let counter = 0;
 //   let lowerCaseStr = str.toLowerCase();
