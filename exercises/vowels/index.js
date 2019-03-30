@@ -8,15 +8,21 @@
 //   vowels('Why?') --> 0
 
 
-// ############## Third Solution ################
+// ############## Fourth Solution ################
 function vowels(str) {
-  const vowels = /[aeiouAEIOU]/
-  let counter = 0;
-  for(let char of str) {
-    if(vowels.test(char)) counter++;
-  }
-  return counter;
+  const matches = str.match(/[aeiou]/gi);
+  return matches ? matches.length : 0;
 }
+
+// ############## Third Solution ################
+// function vowels(str) {
+//   const vowels = /[aeiouAEIOU]/
+//   let counter = 0;
+//   for(let char of str) {
+//     if(vowels.test(char)) counter++;
+//   }
+//   return counter;
+// }
 
 // ############## Second Solution ################
 // function vowels(str) {
