@@ -8,15 +8,30 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 
-// ############# Second Solution #################
+// ############# Third Solution #################
 function capitalize(str) {
-  const words = [];
+  let capitalizedStr = '';
 
-  for(let word of str.split(' ')) {
-    words.push(word[0].toUpperCase() + word.slice(1));
+  for(let char = 0; char < str.length; char++) {
+    if(char === 0 || str[char - 1] === ' ') {
+      capitalizedStr += str[char].toUpperCase();
+    }
+    else {
+      capitalizedStr += str[char];
+    }
   }
-  return words.join(' ');
+  return capitalizedStr;
 }
+
+// ############# Second Solution #################
+// function capitalize(str) {
+//   const words = [];
+//
+//   for(let word of str.split(' ')) {
+//     words.push(word[0].toUpperCase() + word.slice(1));
+//   }
+//   return words.join(' ');
+// }
 
 // ############# First Solution #################
 // function capitalize(str) {
